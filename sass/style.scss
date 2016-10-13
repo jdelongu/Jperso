@@ -1,0 +1,19 @@
+$columns: 12;
+$width: 100%;
+$margin: 1%;
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+
+  > div {
+    background-color: #ddd;
+  }
+}
+@for $i from 1 to $columns + 1 {
+            .col-#{$i} {
+              float: left;
+              margin: 0 $margin;
+              width: $i * $width / $columns - 2 * $margin;
+            }
+          }
